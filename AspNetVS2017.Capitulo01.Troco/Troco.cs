@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AspNetVS2017.Capitulo01.Variaveis
+namespace AspNetVS2017.Capitulo01.Troco
 {
-    public partial class Form1 : Form
+    public partial class Troco : Form
     {
-        public Form1()
+        public Troco()
         {
             InitializeComponent();
         }
