@@ -1,6 +1,6 @@
 ﻿namespace AspNetVS2017.Capitulo01.Troco
 {
-    partial class Troco
+    partial class TrocoForm
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Troco));
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             ""}, 5, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
@@ -43,17 +42,18 @@
             System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             ""}, "1.png", System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("");
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrocoForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.calcularButton = new System.Windows.Forms.Button();
-            this.valorCompraTextbox = new System.Windows.Forms.TextBox();
-            this.valorPagoTextBox = new System.Windows.Forms.TextBox();
             this.valorTrocoTextBox = new System.Windows.Forms.TextBox();
+            this.valorPagoTextBox = new System.Windows.Forms.TextBox();
+            this.valorCompraTextbox = new System.Windows.Forms.TextBox();
+            this.calcularButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.moedasImageList = new System.Windows.Forms.ImageList(this.components);
             this.moedasListView = new System.Windows.Forms.ListView();
+            this.moedasImageList = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -71,28 +71,42 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(261, 249);
+            this.groupBox1.Size = new System.Drawing.Size(261, 355);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Valores";
             // 
-            // label1
+            // valorTrocoTextBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Valor da Compra";
+            this.valorTrocoTextBox.Location = new System.Drawing.Point(132, 79);
+            this.valorTrocoTextBox.Name = "valorTrocoTextBox";
+            this.valorTrocoTextBox.ReadOnly = true;
+            this.valorTrocoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.valorTrocoTextBox.TabIndex = 5;
             // 
-            // label2
+            // valorPagoTextBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Valor Pago";
+            this.valorPagoTextBox.Location = new System.Drawing.Point(132, 46);
+            this.valorPagoTextBox.Name = "valorPagoTextBox";
+            this.valorPagoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.valorPagoTextBox.TabIndex = 3;
+            // 
+            // valorCompraTextbox
+            // 
+            this.valorCompraTextbox.Location = new System.Drawing.Point(132, 13);
+            this.valorCompraTextbox.Name = "valorCompraTextbox";
+            this.valorCompraTextbox.Size = new System.Drawing.Size(100, 20);
+            this.valorCompraTextbox.TabIndex = 0;
+            // 
+            // calcularButton
+            // 
+            this.calcularButton.Location = new System.Drawing.Point(17, 120);
+            this.calcularButton.Name = "calcularButton";
+            this.calcularButton.Size = new System.Drawing.Size(237, 23);
+            this.calcularButton.TabIndex = 1;
+            this.calcularButton.Text = "&Calcular";
+            this.calcularButton.UseVisualStyleBackColor = true;
+            this.calcularButton.Click += new System.EventHandler(this.calcularButton_Click);
             // 
             // label3
             // 
@@ -103,36 +117,23 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Troco";
             // 
-            // calcularButton
+            // label2
             // 
-            this.calcularButton.Location = new System.Drawing.Point(17, 120);
-            this.calcularButton.Name = "calcularButton";
-            this.calcularButton.Size = new System.Drawing.Size(237, 23);
-            this.calcularButton.TabIndex = 1;
-            this.calcularButton.Text = "&Calcular";
-            this.calcularButton.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(32, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Valor Pago";
             // 
-            // valorCompraTextbox
+            // label1
             // 
-            this.valorCompraTextbox.Location = new System.Drawing.Point(132, 13);
-            this.valorCompraTextbox.Name = "valorCompraTextbox";
-            this.valorCompraTextbox.Size = new System.Drawing.Size(100, 20);
-            this.valorCompraTextbox.TabIndex = 2;
-            // 
-            // valorPagoTextBox
-            // 
-            this.valorPagoTextBox.Location = new System.Drawing.Point(132, 46);
-            this.valorPagoTextBox.Name = "valorPagoTextBox";
-            this.valorPagoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.valorPagoTextBox.TabIndex = 2;
-            // 
-            // valorTrocoTextBox
-            // 
-            this.valorTrocoTextBox.Location = new System.Drawing.Point(132, 79);
-            this.valorTrocoTextBox.Name = "valorTrocoTextBox";
-            this.valorTrocoTextBox.ReadOnly = true;
-            this.valorTrocoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.valorTrocoTextBox.TabIndex = 2;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Valor da Compra";
             // 
             // groupBox2
             // 
@@ -142,21 +143,10 @@
             this.groupBox2.Controls.Add(this.moedasListView);
             this.groupBox2.Location = new System.Drawing.Point(279, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(522, 249);
+            this.groupBox2.Size = new System.Drawing.Size(522, 355);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Troco";
-            // 
-            // moedasImageList
-            // 
-            this.moedasImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("moedasImageList.ImageStream")));
-            this.moedasImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.moedasImageList.Images.SetKeyName(0, "1.png");
-            this.moedasImageList.Images.SetKeyName(1, "5.png");
-            this.moedasImageList.Images.SetKeyName(2, "10.png");
-            this.moedasImageList.Images.SetKeyName(3, "25.png");
-            this.moedasImageList.Images.SetKeyName(4, "50.png");
-            this.moedasImageList.Images.SetKeyName(5, "100.png");
             // 
             // moedasListView
             // 
@@ -172,18 +162,30 @@
             this.moedasListView.LargeImageList = this.moedasImageList;
             this.moedasListView.Location = new System.Drawing.Point(3, 16);
             this.moedasListView.Name = "moedasListView";
-            this.moedasListView.Size = new System.Drawing.Size(516, 230);
+            this.moedasListView.Size = new System.Drawing.Size(516, 336);
             this.moedasListView.TabIndex = 2;
             this.moedasListView.UseCompatibleStateImageBehavior = false;
             // 
-            // Troco
+            // moedasImageList
             // 
+            this.moedasImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("moedasImageList.ImageStream")));
+            this.moedasImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.moedasImageList.Images.SetKeyName(0, "1.png");
+            this.moedasImageList.Images.SetKeyName(1, "5.png");
+            this.moedasImageList.Images.SetKeyName(2, "10.png");
+            this.moedasImageList.Images.SetKeyName(3, "25.png");
+            this.moedasImageList.Images.SetKeyName(4, "50.png");
+            this.moedasImageList.Images.SetKeyName(5, "100.png");
+            // 
+            // TrocoForm
+            // 
+            this.AcceptButton = this.calcularButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(896, 273);
+            this.ClientSize = new System.Drawing.Size(896, 379);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Troco";
+            this.Name = "TrocoForm";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
