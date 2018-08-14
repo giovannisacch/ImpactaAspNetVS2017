@@ -28,18 +28,87 @@ namespace AspNetVS2017.Capitulo01.Fretes
             }
             else
             {
-
+                MessageBox.Show(string.Join(Environment.NewLine, erros),
+                    "Validação",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 
         private void Calcular()
         {
-            throw new NotImplementedException();
+            var frete = 0m;
+            var valor = Convert.ToDecimal(valorTextBox.Text);
+            var nordeste = new List<string> {"BA","PE","AL","RN","CE"};
+
+            switch (ufComboBox.Text)
+            {
+                case "SP": frete = 0.2m;
+                    break;
+                case "RJ":
+                case "ES":
+                    frete = 0.3m;
+                    break;
+                case "MG":
+                    frete = 0.35m;
+                    break;
+                case "AM":
+                    frete = 0.6m;
+                    break;
+                case var uf when nordeste.Contains(uf):
+                    frete = 0.5m;
+                    break;
+                default:
+                    frete = 0.75m;
+                    break;
+                case null:
+                    throw new NullReferenceException("Combo UF não pode ser nulo.");
+            }
+            freteTextBox.Text = frete.ToString("P2");
+            totalTextBox.Text = ((1 + frete) * valor).ToString("c");
+
         }
 
         private List<string> ValidarFormulario()
         {
-            throw new NotImplementedException();
+            var erros = new List<string>();
+
+            if (ClienteTextBox.Text == string.Empty)
+            {
+                erros.Add("O campo Cliente é obrigatório");
+            }
+            if (string.IsNullOrEmpty(valorTextBox.Text))
+            {
+                erros.Add("O campo Valor é obrigatório");
+            }
+            else
+            {
+                if (!decimal.TryParse(valorTextBox.Text, out decimal valor))
+                {
+                    erros.Add("O campo valor está com formato inválido");
+                }
+                else
+                {
+                    if (valor < 100)
+                    {
+                        erros.Add("Valor informado abaixo do minímo (100)");
+                    }
+                }
+            }
+            if (ufComboBox.SelectedIndex == -1)
+            {
+                erros.Add("Selecione a UF");
+            }
+            return erros;
+        }
+
+        private void limparButton_Click(object sender, EventArgs e)
+        {
+            ClienteTextBox.Text = "";
+            valorTextBox.Text = string.Empty;
+            ufComboBox.SelectedIndex = -1;
+            freteTextBox.Clear();
+            totalTextBox.Text = null;
         }
     }
 }

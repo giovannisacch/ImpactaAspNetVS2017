@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetVS2017.Capitulo01.Tro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetVS2017.Capitulo01.Fretes", "AspNetVS2017.Capitulo01.Fretes\AspNetVS2017.Capitulo01.Fretes.csproj", "{F43562EF-AEC6-4BF3-A342-E17914BF7BF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetVS2017.Capitulo01.Repeticao.Testes", "AspNetVS2017.Capitulo01.Repeticao.Testes\AspNetVS2017.Capitulo01.Repeticao.Testes.csproj", "{F47A1DB3-BC4C-406C-9F69-9CEA922E3110}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetVS2017.Capitulo01.VetoresColecoes.Testes", "AspNetVS2017.Capitulo01.VetoresColecoes.Testes\AspNetVS2017.Capitulo01.VetoresColecoes.Testes.csproj", "{579516BB-FE4B-442F-8E69-8C5587A3809C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{F43562EF-AEC6-4BF3-A342-E17914BF7BF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F43562EF-AEC6-4BF3-A342-E17914BF7BF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F43562EF-AEC6-4BF3-A342-E17914BF7BF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F47A1DB3-BC4C-406C-9F69-9CEA922E3110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F47A1DB3-BC4C-406C-9F69-9CEA922E3110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F47A1DB3-BC4C-406C-9F69-9CEA922E3110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F47A1DB3-BC4C-406C-9F69-9CEA922E3110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{579516BB-FE4B-442F-8E69-8C5587A3809C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{579516BB-FE4B-442F-8E69-8C5587A3809C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{579516BB-FE4B-442F-8E69-8C5587A3809C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{579516BB-FE4B-442F-8E69-8C5587A3809C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
