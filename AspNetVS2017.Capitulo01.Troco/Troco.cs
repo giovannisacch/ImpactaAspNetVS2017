@@ -28,31 +28,43 @@ namespace AspNetVS2017.Capitulo01.Troco
                 valorTrocoTextBox.Text = valorTroco.ToString("C", new CultureInfo("en-US"));
 
                 //ToDo: Refatorar para usar vetor e for.
+                var cont = 0;
+                var moedas = new decimal[] {1, 0.5M, 0.25M, 0.10M, 0.05M, 0.01M};
+                //foreach (var moeda in moedas)
+                //{
+                //  moedasListView.Items[cont++].Text = ((int)(valorTroco %= moeda)).ToString();
+                //}
 
-                var moedas1 = (int)valorTroco;
-                valorTroco = (valorTroco % 1); //ou valorTroco = valoTroco - moedas1;
+                for (int i = 0; i < moedas.Length; i++)
+                {
+                    moedasListView.Items[i].Text = ((int)(valorTroco %= moedas[i])).ToString();
+                    valorTroco %= moedas[i];
+                }
 
-                var moedas050 = (int)(valorTroco / 0.5M);
-                valorTroco %= 0.5M;
+                //var moedas1 = (int)valorTroco;
+                //valorTroco = (valorTroco % 1); //ou valorTroco = valoTroco - moedas1;
 
-                var moedas025 = (int)(valorTroco / 0.25M);
-                valorTroco %= 0.25M;
+                //var moedas050 = (int)(valorTroco / 0.5M);
+                //valorTroco %= 0.5M;
 
-                var moedas010 = (int)(valorTroco / 0.10M);
-                valorTroco %= 0.10M;
+                //var moedas025 = (int)(valorTroco / 0.25M);
+                //valorTroco %= 0.25M;
 
-                var moedas005 = (int)(valorTroco / 0.05M);
-                valorTroco %= 0.05M;
+                //var moedas010 = (int)(valorTroco / 0.10M);
+                //valorTroco %= 0.10M;
 
-                var moedas001 = (int)(valorTroco / 0.01M);
-                valorTroco %= 0.01M;
+                //var moedas005 = (int)(valorTroco / 0.05M);
+                //valorTroco %= 0.05M;
 
-                moedasListView.Items[0].Text = moedas1.ToString();
-                moedasListView.Items[1].Text = moedas050.ToString();
-                moedasListView.Items[2].Text = moedas025.ToString();
-                moedasListView.Items[3].Text = moedas010.ToString();
-                moedasListView.Items[4].Text = moedas005.ToString();
-                moedasListView.Items[5].Text = moedas001.ToString();
+                //var moedas001 = (int)(valorTroco / 0.01M);
+                //valorTroco %= 0.01M;
+
+                //moedasListView.Items[0].Text = moedas1.ToString();
+                //moedasListView.Items[1].Text = moedas050.ToString();
+                //moedasListView.Items[2].Text = moedas025.ToString();
+                //moedasListView.Items[3].Text = moedas010.ToString();
+                //moedasListView.Items[4].Text = moedas005.ToString();
+                //moedasListView.Items[5].Text = moedas001.ToString();
             }
             else
             {

@@ -17,6 +17,7 @@ namespace AspNetVS2017.Capitulo01.Repeticao.Testes
                 {
                     x++;
                     i = 0;
+                    Console.Write(new string('-', 100));
                 };
                 //for (int j = 1; j <= 10; j++)
                 //{
